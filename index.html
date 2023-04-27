@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="/vite.svg" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Vite App</title>
+  </head>
+  <body>
+    <div>
+      <h3>Session Storage</h3>
+      <input
+        type="text"
+        name="sessionStorageValue"
+        id="sessionStorageValue"
+        placeholder="input something..."
+      />
+      <h3>Local Storage</h3>
+      <input
+        type="text"
+        name="localStorageValue"
+        id="localStorageValue"
+        placeholder="input something..."
+      />
+    </div>
+    <br />
+    <div>
+      <button type="button" id="storeButton">
+        Store them in sessionStorage and localStorage
+      </button>
+      <button type="button" id="clearButton">
+        Clear data in sessionStorage and localStorage
+      </button>
+    </div>
+    <hr />
+    <div>
+      <h1>Session Storage Data</h1>
+      <div id="sessionStorageData"></div>
+    </div>
+    <div>
+      <h1>Local Storage Data</h1>
+      <div id="localStorageData"></div>
+    </div>
+    <script type="module" src="/main.js"></script>
+  </body>
+</html>
