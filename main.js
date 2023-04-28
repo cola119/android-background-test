@@ -1,6 +1,4 @@
-const submitButton = document.getElementById("storeButton");
-const clearButton = document.getElementById("clearButton");
-submitButton.onclick = () => {
+document.getElementById("storeSessionStorageButton").onclick = () => {
   const sessionStorageValue = document.getElementById(
     "sessionStorageValue"
   ).value;
@@ -8,18 +6,22 @@ submitButton.onclick = () => {
     setSessionStorage("key1", sessionStorageValue);
     alert(`${sessionStorageValue} is stored in sessionStorage`);
   }
+};
+document.getElementById("clearSessionStorageButton").onclick = () => {
+  sessionStorage.clear();
+  alert("Cleared");
+};
 
+document.getElementById("storeLocalStorageButton").onclick = () => {
   const localStorageValue = document.getElementById("localStorageValue").value;
   if (localStorageValue) {
     setLocalStorage("key1", localStorageValue);
     alert(`${localStorageValue} is stored in localStorage`);
   }
 };
-
-clearButton.onclick = () => {
-  sessionStorage.clear();
+document.getElementById("clearLocalStorageButton").onclick = () => {
   localStorage.clear();
-  alert("sessionStorage and localStorage are cleared");
+  alert("Cleared");
 };
 
 const main = () => {
